@@ -1,4 +1,4 @@
-Spree::Api::base_controller.class_eval do
+Spree::Api::BaseController.class_eval do
   before_filter :check_api_version
 
   private

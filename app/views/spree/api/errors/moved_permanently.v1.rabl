@@ -1,2 +1,2 @@
 object false
-node(:error) { I18n.t(:resource_moved_permanently, :scope => "spree.api") }
+node(:error) { I18n.t(:api_version_not_supported, :scope => "spree.api") }
