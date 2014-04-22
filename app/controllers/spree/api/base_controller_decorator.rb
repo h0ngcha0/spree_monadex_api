@@ -4,8 +4,13 @@ Spree::Api::BaseController.class_eval do
   private
 
   def check_api_version
-    if ! params[:version]
+    if ! supported_versions.include?(@api_version)
       render "spree/api/errors/moved_permanently", :status => 301 and return
     end
   end
+
+  def supported_versions
+    [1]
+  end
+  
 end
